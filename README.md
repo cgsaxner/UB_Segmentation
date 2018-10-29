@@ -13,4 +13,4 @@ To use the framework, you need:
 
 Furthermore, you may use the [MeVisLab](https://www.mevislab.de/download/) network to preprocess training and testing data:
 
-[Exploit 18F-FDG enhanced urinary bladder in PET data for Deep Learning Ground Truth Generation in CT scans(https://github.com/cgsaxner/DataPrep_UBsegmentation)
+[Exploit 18F-FDG enhanced urinary bladder in PET data for Deep Learning Ground Truth Generation in CT scans](https://github.com/cgsaxner/DataPrep_UBsegmentation)
