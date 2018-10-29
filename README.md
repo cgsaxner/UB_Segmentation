@@ -29,7 +29,7 @@ ResNet is based on [DeepLab by Chen et al.](https://arxiv.org/pdf/1606.00915.pdf
 - **Testing networks.**
 The scripts [`FCN_testing.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/FCN_testing.py) and [`ResNet_testing.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/ResNet_testing.py) contain code for testing the previously trained networks.
 
--**Evaluation metrics.**
+- **Evaluation metrics.**
 The file [`metrics.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/metrics.py) contains functions to calculate following metrics for evaluating segmentation results:
   - True Positive Rate (TPR)
   - True Negative Rate (TNR)
