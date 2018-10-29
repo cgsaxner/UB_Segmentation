@@ -1,7 +1,7 @@
 # Automatic urinary bladder segmentation in CT images using deep learning
 A framework for urinary bladder segmentation in CT images using deep learning.
 
-Contains code to train and test two different segmentation network architectures using training and testing data obtained from combined PET/CT scans. 
+Contains code to train and test two different deep neural network architectures for semantic segmentation using training and testing data obtained from combined PET/CT scans. 
 
 ## Requirements
 To use the framework, you need:
