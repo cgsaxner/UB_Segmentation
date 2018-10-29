@@ -5,24 +5,33 @@ from six.moves import xrange
 import tf_records
 slim = tf.contrib.slim
 
-# define paths
 os.environ["CUDA_VISIBLE_DEVICES"] = " "
-sys.path.append("C:/Users/gsaxner/Documents/Code/models-master/slim")
-# sys.path.append("/home/c/cg_18/MastersThesis/Slim")
-# sys.path.append("D:/Dokumente/Uni/Master/Masterarbeit/Documents/Code/models-master/slim")
+
+#####################################################################
+#
+# specify paths and filenames here!
+#
+#####################################################################
+
+# define path to tf-slim here
+sys.path.append("PATH_TO_SLIM/models-master/slim")
+
+# define the path to your project here:
+project_path = "PATH_TO_PYTHON_PROJECT"
+
+# path to testing data in tfrecords file format:
+training_data_filename = "DATA_PATH\TrainingData.tfrecords"
+
+#####################################################################
+
 
 from networks import FCN
 
-checkpoints_dir = "C:/Users/gsaxner/PycharmProjects/MastersThesis/Checkpoints"
-# checkpoints_dir = '/home/c/cg_18/MastersThesis/Code/Checkpoints'
-# checkpoints_dir = "D:/Dokumente/Uni/Master/Masterarbeit/PycharmProjects/MastersThesis/Checkpoints"
+checkpoints_dir = os.path.join(project_path, "Checkpoints")
 
-log_folder = "C:/Users/gsaxner/PycharmProjects/MastersThesis/Logs"
-# log_folder = '/home/c/cg_18/MastersThesis/Code/Logs'
-# log_folder = "D:/Dokumente/Uni/Master/Masterarbeit/PycharmProjects/MastersThesis/Logs"
+log_folder = os.path.join(project_path, "Logs")
 
-training_data_filename = "C:/Users/gsaxner/PycharmProjects/MastersThesis/TrainingData/Training_FullAug_512.tfrecords"
-# training_data_filename = "/home/c/cg_18/MastersThesis/TrainingData/Training_FullAug_256.tfrecords"
+data_save_path = os.path.join(project_path, "Results")
 
 model_checkpoint_path = os.path.join(checkpoints_dir, 'FCN_FullAug_512.ckpt')
 model_checkpoint_final_path = os.path.join(checkpoints_dir, 'FCN_FullAug_512_final.ckpt')
