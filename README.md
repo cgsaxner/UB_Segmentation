@@ -49,5 +49,31 @@ The file [`metrics.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/
   - Intersection over union (Jaccard Index, IoU)
   - Dice-Sorensen coefficient (DSC)
   - Hausdorff distance (HD)
+  
+## Acknowledgements
+Parts of the code are based on [tf-image-segmentation](https://github.com/warmspringwinds/tf-image-segmentation). If using, please cite his paper:
+    @article{pakhomov2017deep,
+      title={Deep Residual Learning for Instrument Segmentation in Robotic Surgery},
+      author={Pakhomov, Daniil and Premachandran, Vittal and Allan, Max and Azizian, Mahdi and Navab, Nassir},
+      journal={arXiv preprint arXiv:1703.08580},
+      year={2017}
+    }
+    
+## License
+
+If you use the software/network, please cite the following paper:
+
+Gsaxner, Christina et al. **Exploit 18F-FDG Enhanced Urinary Bladder in PET Data for Deep Learning Ground Truth Generation in CT Scans.** SPIE Medical Imaging 2018.
+
+    @inproceedings{gsaxner2018exploit,
+      title={Exploit 18 F-FDG enhanced urinary bladder in PET data for deep learning ground truth generation in CT scans},
+      author={Gsaxner, Christina and Pfarrkirchner, Birgit and Lindner, Lydia and Jakse, Norbert and Wallner, J{\"u}rgen and Schmalstieg, Dieter and Egger, Jan},
+      booktitle={Medical Imaging 2018: Biomedical Applications in Molecular, Structural, and Functional Imaging},
+      volume={10578},
+      pages={105781Z},
+      year={2018},
+      organization={International Society for Optics and Photonics}
+    }
+
 
 
