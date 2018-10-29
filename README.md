@@ -57,7 +57,7 @@ Parts of the code are based on [tf-image-segmentation](https://github.com/warmsp
     
 ## License
 
-This project is licensed under the terms of the MIT license. 
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Using the framework
 
