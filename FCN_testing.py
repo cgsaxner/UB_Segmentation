@@ -14,25 +14,33 @@ slim = tf.contrib.slim
 
 os.environ["CUDA_VISIBLE_DEVICES"] = " "
 
-# define slim path
-sys.path.append("C:/Users/gsaxner/Documents/Code/models-master/slim")
-# sys.path.append("D:/Dokumente/Uni/Master/Masterarbeit/Documents/Code/models-master/slim")
+#####################################################################
+#
+# specify paths and filenames here!
+#
+#####################################################################
 
-# sys.path.append("C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/extras/CUPTI/libx64")
+# define path to tf-slim here
+sys.path.append("PATH_TO_SLIM/models-master/slim")
+
+# define the path to your project here:
+project_path = "PATH_TO_PYTHON_PROJECT"
+
+# path to testing data in tfrecords file format:
+testing_data_filename = "DATA_PATH\TestingData.tfrecords"
+
+# trained model checkpoint to test:
+model_checkpoint_path = "CHECKPOINT_PATH\checkpoint_file.ckpt"
+
+#####################################################################
 
 from networks import FCN
 
-# checkpoints_path = "D:/Dokumente/Uni/Master/Masterarbeit/PycharmProjects/MastersThesis/Checkpoints"
-checkpoints_path = "C:/Users/gsaxner/PycharmProjects/MastersThesis/Checkpoints"
+checkpoints_path = os.path.join(project_path, "Checkpoints")
 
-# log_path = "D:/Dokumente/Uni/Master/Masterarbeit/PycharmProjects/MastersThesis/Logs"
-log_path = "C:/Users/gsaxner/PycharmProjects/MastersThesis/Logs"
+log_path = os.path.join(project_path, "Logs")
 
-testing_data_filename = "F:\TestingDataNoAug\TestingData_512.tfrecords"
-
-data_save_path = "F:\Results\FCN_TransAug_256"
-
-model_checkpoint_path = os.path.join(checkpoints_path, "FCN_TransAug_256.ckpt")
+data_save_path = os.path.join(project_path, "Results")
 
 number_of_classes = 2
 
@@ -107,16 +115,6 @@ with tf.Session() as sess:
         scipy.misc.imsave(label_save_path, current_label[0, :, :])
         scipy.misc.imsave(pred_save_path, current_pred[0, :, :])
 
-        # if i % 500 == 0:
-        #     f, (ax1, ax2, ax3) = plt.subplots(1, 3, sharey=True)
-        #     ax1.imshow(current_image)
-        #     ax1.set_title('Input image')
-        #     ax2.imshow(current_label[0, :, :])
-        #     ax2.set_title('Input Ground-Truth Annotation')
-        #     ax3.imshow(current_pred[0, :, :])
-        #     ax3.set_title('Prediction')
-        #     plt.show()
-
     coord.request_stop()
     coord.join(threads)
 
@@ -131,43 +129,6 @@ with tf.Session() as sess:
         filewriter.writerow(dice_vec)
         filewriter.writerow(tpr_vec)
         filewriter.writerow(tnr_vec)
-
-    # hd_save_path = os.path.join(data_save_path, "hausdorff.jpg")
-    # dice_save_path = os.path.join(data_save_path, "dice.jpg")
-    # tpr_save_path = os.path.join(data_save_path, "tpr.jpg")
-    # tnr_save_path = os.path.join(data_save_path, "tnr.jpg")
-    #
-    # plt.hist(dice_vec, edgecolor='black', linewidth=1.2)
-    # plt.xlabel('Dice Coefficient')
-    # plt.ylabel('Frequency')
-    # plt.axis([0, 100, 0, 150])
-    # plt.grid(True)
-    # plt.savefig(dice_save_path)
-    # plt.clf()
-    #
-    # plt.hist(tpr_vec, edgecolor='black', linewidth=1.2)
-    # plt.xlabel('True Positive Rate')
-    # plt.ylabel('Frequency')
-    # plt.axis([0, 100, 0, 150])
-    # plt.grid(True)
-    # plt.savefig(tpr_save_path)
-    # plt.clf()
-    #
-    # plt.hist(tnr_vec, edgecolor='black', linewidth=1.2)
-    # plt.xlabel('True Negative Rate')
-    # plt.ylabel('Frequency')
-    # plt.axis([60, 100, 0, 150])
-    # plt.grid(True)
-    # plt.savefig(tnr_save_path)
-    # plt.clf()
-    #
-    # plt.hist(hd_vec, edgecolor='black', linewidth=1.2)
-    # plt.xlabel('Hausdorff Distance')
-    # plt.ylabel('Frequency')
-    # plt.axis([0, 60, 0, 150])
-    # plt.grid(True)
-    # plt.savefig(hd_save_path)
-    # plt.clf()
 
     print("Mean Hausdorff Distance: ", mean_hd)
     print("Mean Dice: ", mean_dice)
