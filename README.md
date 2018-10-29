@@ -11,4 +11,5 @@ To use the framework, you need:
 2. [TensorFlow](https://www.tensorflow.org/versions/r1.3/) 1.3
 3. [TensorFlow-Slim](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim) library
 
-Furthermore, you may use the [MeVisLab](https://www.mevislab.de/download/) network at ```https://github.com/cgsaxner/DataPrep_UBsegmentation.git``` to preprocess training and testing data.
+Furthermore, you may use the [MeVisLab](https://www.mevislab.de/download/) network to preprocess training and testing data:
+[Exploit 18F-FDG enhanced urinary bladder in PET data for Deep Learning Ground Truth Generation in CT scans(https://github.com/cgsaxner/DataPrep_UBsegmentation)
