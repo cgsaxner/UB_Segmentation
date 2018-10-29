@@ -30,8 +30,8 @@ from networks import FCN
 checkpoints_dir = os.path.join(project_path, "Checkpoints")
 log_folder = os.path.join(project_path, "Logs")
 data_save_path = os.path.join(project_path, "Results")
-model_checkpoint_path = os.path.join(checkpoints_dir, 'FCN_FullAug_512.ckpt')
-model_checkpoint_final_path = os.path.join(checkpoints_dir, 'FCN_FullAug_512_final.ckpt')
+model_checkpoint_path = os.path.join(checkpoints_dir, 'FCN.ckpt')
+model_checkpoint_final_path = os.path.join(checkpoints_dir, 'FCN_final.ckpt')
 vgg_checkpoint_path = os.path.join(checkpoints_dir, 'vgg_16.ckpt')
 
 # define parameters
