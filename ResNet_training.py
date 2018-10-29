@@ -6,27 +6,36 @@ import tf_records
 slim = tf.contrib.slim
 
 # define CUDA device
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
-# define slim path
-# sys.path.append("C:/Users/gsaxner/Documents/Code/models-master/slim")
-sys.path.append("D:/Dokumente/Uni/Master/Masterarbeit/Documents/Code/models-master/slim")
+#####################################################################
+#
+# specify paths and filenames here!
+#
+#####################################################################
 
-sys.path.append("C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/extras/CUPTI/libx64")
+# define path to tf-slim here
+sys.path.append("PATH_TO_SLIM/models-master/slim")
+
+# define the path to your project here:
+project_path = "PATH_TO_PYTHON_PROJECT"
+
+# path to testing data in tfrecords file format:
+training_data_filename = "DATA_PATH\TrainingData.tfrecords"
+
+#####################################################################
+
 
 from networks import upsampled_ResNet
 
-checkpoints_dir= "D:/Dokumente/Uni/Master/Masterarbeit/PycharmProjects/MastersThesis/Checkpoints"
-# checkpoints_path = "C:/Users/gsaxner/PycharmProjects/MastersThesis/Checkpoints"
+checkpoints_dir = os.path.join(project_path, "Checkpoints")
+log_path = os.path.join(project_path, "Logs")
+data_save_path = os.path.join(project_path, "Results")
 
-log_path = "D:/Dokumente/Uni/Master/Masterarbeit/PycharmProjects/MastersThesis/Logs"
-# log_path = "C:/Users/gsaxner/PycharmProjects/MastersThesis/Logs"
-
-training_data_filename = "F:/TrainingDataTransformed/Training_TransAug_512.tfrecords"
-
-model_checkpoint_path = os.path.join(checkpoints_dir, 'ResNet_TransAug_512.ckpt')
-
+model_checkpoint_path = os.path.join(checkpoints_dir, 'ResNet.ckpt')
+model_checkpoint_final_path = os.path.join(checkpoints_dir, 'ResNet_final.ckpt')
 resnet_checkpoint_path = os.path.join(checkpoints_dir, 'resnet_v2_152.ckpt')
+
 
 # define parameters
 number_of_classes = 2
