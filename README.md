@@ -29,7 +29,7 @@ This software produces ground-truth segmentations of the urinary bladder in CT u
 The script [`make_tfrecords_dataset.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/make_tfrecords_dataset.py) contains code to convert a directory of image files to the TensorFlow recommended file format TFRecords. TFRecords files are easy and fast to process in TensorFlow.
 
 - **Training networks.**
-The scripts [`FCN_training.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/FCN_training.py) and [`ResNet_training.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/ResNet_training.py) contain code for training deep neural networks using your own data. 
+The scripts [`FCN_training.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/FCN_training.py) and [`ResNet_training.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/ResNet_training.py) contain code for training two different neural network architectures for semantic segmentation.
 FCN is based on [FCN-8s by Long et al.](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf) using [pre-trained VGG](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/slim/python/slim/nets/vgg.py).
 ResNet is based on [DeepLab by Chen et al.](https://arxiv.org/pdf/1606.00915.pdf]) using [pre-trained ResNet V2](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/slim/python/slim/nets/resnet_v2.py).
 
