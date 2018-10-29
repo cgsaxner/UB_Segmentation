@@ -19,7 +19,6 @@ The data was preprocessed and prepared using a the MeVisLab network [Exploit 18F
 
 This software produces ground-truth segmentations of the urinary bladder in CT using the co-registered PET data. PET radiotracer 18F-FDG accumulates in the urinary bladder, therefore, this organ can be distinguished using simple thresholding. Furthermore, data augmentation is applied using MeVisLab software. For further information, please refer to the corresponding paper:
 
-
 [Exploit 18F-FDG Enhanced Urinary Bladder in PET Data for Deep Learning Ground Truth Generation in CT Scans.](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10578/105781Z/Exploit-sup18-supF-FDG-enhanced-urinary-bladder-in-PET-data/10.1117/12.2292706.short?SSO=1)
 
 
