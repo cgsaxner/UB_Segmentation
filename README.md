@@ -6,7 +6,7 @@ Contains code to train and test two different deep neural network architectures 
 ## Requirements
 To use the framework, you need:
 
-1. [Python](https://www.python.org/download/releases/3.5/) 3.5
+1. [Python](https://www.python.org/download/releases/3.5/) 3.5 with the packages specified in the [requirements.txt](https://github.com/cgsaxner/UB_Segmentation/blob/master/requirements.txt) file
 2. [TensorFlow](https://www.tensorflow.org/versions/r1.3/) 1.3
 3. [TensorFlow-Slim](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/slim) library
 
@@ -42,6 +42,22 @@ The file [`metrics.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/
   - Intersection over union (Jaccard Index, IoU)
   - Dice-Sorensen coefficient (DSC)
   - Hausdorff distance (HD)
+  
+## Getting started
+
+To use the framework for creating a tf-records file:
+1. Place your images and ground truth in folders called **Images** and **Labels**, respectively.
+2. Specify the path to your data, the desired filename and the desired image size in [`make_tfrecords_dataset.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/make_tfrecords_dataset.py).
+3. Run the script!
+
+To use the framework for training:
+1. Download the pre-trained model checkpoint you want to use from [TensorFlow-Slim](https://github.com/tensorflow/models/tree/master/research/slim#Pretrained) and place it in a **\Checkpoints** folder in your project repository.
+2. Specify your paths in the top section of [`FCN_training.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/FCN_training.py) or [`ResNet_training.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/ResNet_training.py).
+3. Run the script!
+
+To use the framework for testing:
+1. Specify your paths in the top section of [`FCN_testing.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/FCN_testing.py) or [`ResNet_testing.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/ResNet_testing.py).
+2. Run the script!
   
 ## Acknowledgements
 Parts of the code are based on [tf-image-segmentation](https://github.com/warmspringwinds/tf-image-segmentation). If using, please cite his paper:
