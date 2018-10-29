@@ -57,7 +57,11 @@ Parts of the code are based on [tf-image-segmentation](https://github.com/warmsp
     
 ## License
 
-If you use the software/network, please cite the following paper:
+This project is licensed under the terms of the MIT license. 
+
+## Using the framework
+
+If you use the framework, please cite the following paper:
 
 Gsaxner, Christina et al. **Exploit 18F-FDG Enhanced Urinary Bladder in PET Data for Deep Learning Ground Truth Generation in CT Scans.** SPIE Medical Imaging 2018.
 
