@@ -37,9 +37,7 @@ model_checkpoint_path = "CHECKPOINT_PATH\checkpoint_file.ckpt"
 from networks import FCN
 
 checkpoints_path = os.path.join(project_path, "Checkpoints")
-
 log_path = os.path.join(project_path, "Logs")
-
 data_save_path = os.path.join(project_path, "Results")
 
 number_of_classes = 2
