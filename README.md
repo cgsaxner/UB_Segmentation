@@ -1,5 +1,4 @@
-# Exploit fully automatic low-level segmented PET Data for training high-level Deep Learning Algorithms for the corresponding CT Data Code for automatic urinary bladder segmentation using Python and Tensorflow.
-
+# Automatic urinary bladder segmentation in CT images using deep learning
 A framework for urinary bladder segmentation in CT images using deep learning.
 
 Contains code to train and test two different segmentation network architectures using training and testing data obtained from combined PET/CT scans. 
