@@ -16,6 +16,16 @@ Furthermore, you may find the [MeVisLab](https://www.mevislab.de/download/) netw
 
 [Exploit 18F-FDG enhanced urinary bladder in PET data for Deep Learning Ground Truth Generation in CT scans](https://github.com/cgsaxner/DataPrep_UBsegmentation)
 
+## Data
+Our networks were trained and tested on the publically available [RIDER Lung PET CT Dataset](https://wiki.cancerimagingarchive.net/display/Public/RIDER+Lung+PET-CT). 
+
+The data was preprocessed and prepared using the following [MeVisLab](https://www.mevislab.de/download/) network:
+[Exploit 18F-FDG enhanced urinary bladder in PET data for Deep Learning Ground Truth Generation in CT scans](https://github.com/cgsaxner/DataPrep_UBsegmentation)
+
+This software produces ground-truth segmentations of the urinary bladder in CT using the co-registered PET data. PET radiotracer 18F-FDG accumulates in the urinary bladder, therefore, this organ can be distinguished using simple thresholding. Furthermore, data augmentation is applied using MeVisLab software. For further information, please refer to the paper:
+[Gsaxner, Christina et al. **Exploit 18F-FDG Enhanced Urinary Bladder in PET Data for Deep Learning Ground Truth Generation in CT Scans.** SPIE Medical Imaging 2018.](https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10578/105781Z/Exploit-sup18-supF-FDG-enhanced-urinary-bladder-in-PET-data/10.1117/12.2292706.short?SSO=1)
+
+
 ## Functionalities
 
 - **Creating TFRecords files for training and testing data.** 
