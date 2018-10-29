@@ -1,0 +1,7 @@
+numpy
+scipy
+Pillow
+csv
+matplotlib
+six
+tensorflow=1.3.0
