@@ -52,12 +52,12 @@ The file [`metrics.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/
   
 ## Acknowledgements
 Parts of the code are based on [tf-image-segmentation](https://github.com/warmspringwinds/tf-image-segmentation). If using, please cite his paper:
-    @article{pakhomov2017deep,
-      title={Deep Residual Learning for Instrument Segmentation in Robotic Surgery},
-      author={Pakhomov, Daniil and Premachandran, Vittal and Allan, Max and Azizian, Mahdi and Navab, Nassir},
-      journal={arXiv preprint arXiv:1703.08580},
-      year={2017}
-    }
+        @article{pakhomov2017deep,
+          title={Deep Residual Learning for Instrument Segmentation in Robotic Surgery},
+          author={Pakhomov, Daniil and Premachandran, Vittal and Allan, Max and Azizian, Mahdi and Navab, Nassir},
+          journal={arXiv preprint arXiv:1703.08580},
+          year={2017}
+        }
     
 ## License
 
