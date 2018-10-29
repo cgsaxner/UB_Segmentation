@@ -13,11 +13,17 @@ To use the framework, you need:
 
 
 Furthermore, you may find the [MeVisLab](https://www.mevislab.de/download/) network to preprocess training and testing data useful:
+
 [Exploit 18F-FDG enhanced urinary bladder in PET data for Deep Learning Ground Truth Generation in CT scans](https://github.com/cgsaxner/DataPrep_UBsegmentation)
 
 ## Functionalities
 
 - **Creating TFRecords files for training and testing data.** 
 The script [`make_tfrecords_dataset.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/make_tfrecords_dataset.py) contains code to convert a directory of image files to the TensorFlow recommended file format TFRecords. TFRecords files are easy and fast to process in TensorFlow.
+
+- **Training networks.**
+The scripts [`FCN_training.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/FCN_training.py) and [`ResNet_training.py`](https://github.com/cgsaxner/UB_Segmentation/blob/master/ResNet_training.py) contain code for training deep neural networks using your own data. 
+FCN is based on [FCN-8s by Long et al.](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf) using [pre-trained VGG](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/slim/python/slim/nets/vgg.py).
+ResNet is based on [DeepLab by Chen et al.](https://arxiv.org/pdf/1606.00915.pdf]) using [pre-trained ResNet V2](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/slim/python/slim/nets/resnet_v2.py).
 
 
